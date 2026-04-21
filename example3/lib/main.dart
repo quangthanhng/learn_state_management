@@ -61,6 +61,7 @@ class MyHomePage extends ConsumerWidget {
       body: Column(
         children: [
           currentWeather.when(
+            // Execute when with async value, with 3 parameters including 3 states
             data: (data) => Text(data, style: const TextStyle(fontSize: 40)),
             error: (error, stackTrace) => const Text('Error 😢'),
             loading: () => Padding(
